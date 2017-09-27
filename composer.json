@@ -38,6 +38,11 @@
             "JpCarbon\\Tests\\": "tests/"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
     "scripts": {
         "test": "./vendor/bin/phpunit; ./vendor/bin/php-cs-fixer fix -v --diff --dry-run;",
         "phpunit": "./vendor/bin/phpunit;",
