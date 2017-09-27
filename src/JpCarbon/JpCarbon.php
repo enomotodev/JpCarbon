@@ -6,9 +6,15 @@ use Carbon\Carbon;
 
 /**
  * @property-read string $holiday
+ * @property-read string $eto
  */
 class JpCarbon extends Carbon
 {
+    /**
+     * @var array
+     */
+    protected static $etoMapping = array('申', '酉', '戌', '亥', '子', '丑', '寅', '卯', '辰', '巳', '午', '未');
+
     /**
      * @param string|null               $time
      * @param \DateTimeZone|string|null $tz
@@ -22,6 +28,8 @@ class JpCarbon extends Carbon
     {
         if ($name === 'holiday') {
             return $this->getHoliday();
+        } elseif ($name === 'eto') {
+            return $this->getEto();
         }
 
         return parent::__get($name);
@@ -167,6 +175,14 @@ class JpCarbon extends Carbon
         }
 
         return '';
+    }
+
+    /**
+     * @return string
+     */
+    public function getEto()
+    {
+        return self::$etoMapping[$this->year % 12];
     }
 
     protected function calcDay($future, $present, $past, $y)

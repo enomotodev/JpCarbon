@@ -23,6 +23,10 @@ var_dump($instance);
 $instance = JpCarbon::createFromDate(2017, 1, 3)->holiday;
 var_dump($instance);
 // => string(0) ""
+
+$eto = JpCarbon::createFromDate(2017)->eto;
+var_dump($eto);
+// => string(3) "酉"
 ```
 
 ## Install
