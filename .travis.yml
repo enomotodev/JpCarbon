@@ -14,6 +14,11 @@ php:
 matrix:
   fast_finish: true
   include:
+    - php: 5.3
+      dist: precise
+    - php: 5.3
+      dist: precise
+      env: setup=lowest
     - php: 5.4
     - php: 5.4
       env: setup=lowest
