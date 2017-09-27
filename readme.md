@@ -1,5 +1,7 @@
 # JpCarbon
 
+[![Build Status](https://api.travis-ci.org/enomotodev/JpCarbon.svg?branch=master)](https://travis-ci.org/enomotodev/JpCarbon)
+
 ## Usage
 
 ```php
