@@ -1,7 +1,7 @@
 {
     "name": "enomotodev/jp-carbon",
     "type": "library",
-    "description": "A simple API extension for DateTime.",
+    "description": "Japanese extended version of carbon of the PHP datetime API.",
     "keywords": [
         "date",
         "time",
