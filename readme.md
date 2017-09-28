@@ -1,5 +1,6 @@
 # JpCarbon
 
+[![Latest Stable Version](https://poser.pugx.org/enomotodev/jp-carbon/v/stable.png)](https://packagist.org/packages/enomotodev/jp-carbon)
 [![Build Status](https://api.travis-ci.org/enomotodev/JpCarbon.svg?branch=master)](https://travis-ci.org/enomotodev/JpCarbon)
 [![StyleCI](https://styleci.io/repos/104899144/shield?style=flat)](https://styleci.io/repos/104899144)
 
