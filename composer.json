@@ -29,6 +29,9 @@
         "phpunit/phpunit": "~4.0 || ~5.0"
     },
     "autoload": {
+        "files": [
+            "src/JpCarbon/helpers.php"
+        ],
         "psr-4": {
             "JpCarbon\\": "src/JpCarbon/"
         }

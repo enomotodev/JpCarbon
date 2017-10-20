@@ -32,6 +32,18 @@ var_dump($eto);
 // => string(3) "酉"
 ```
 
+### via Helpers
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$instance = jp_carbon('20170101')->holiday;
+var_dump($instance);
+// => string(6) "元日"
+```
+
 ## Install
 
 ```
