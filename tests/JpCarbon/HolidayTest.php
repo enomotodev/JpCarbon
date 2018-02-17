@@ -41,4 +41,26 @@ class HolidayTest extends PHPUnit_Framework_TestCase
             array(array(2017, 12, 23), '天皇誕生日'),
         );
     }
+
+    /**
+     * @param array  $date
+     * @param string $expected
+     *
+     * @dataProvider dataProvider天皇誕生日
+     */
+    public function test天皇誕生日($date, $expected)
+    {
+        list($y, $m, $d) = $date;
+        $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
+    }
+
+    public function dataProvider天皇誕生日()
+    {
+        return array(
+            array(array(2017, 12, 23), '天皇誕生日'),
+            array(array(2018, 12, 23), '天皇誕生日'),
+            array(array(2019, 12, 23), ''),
+            array(array(2020, 12, 23), ''),
+        );
+    }
 }

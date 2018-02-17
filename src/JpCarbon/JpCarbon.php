@@ -162,7 +162,7 @@ class JpCarbon extends Carbon
                 return '勤労感謝の日';
             }
         } elseif ($m === 12) {
-            if (1989 <= $y && $d === 23) {
+            if (1989 <= $y && $y <= 2018 && $d === 23) {
                 return '天皇誕生日';
             }
         }
