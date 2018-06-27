@@ -172,6 +172,7 @@ class JpCarbon extends Carbon
                     if (2020 <= $y) {
                         return 'スポーツの日';
                     }
+
                     return '体育の日';
                 }
             }
