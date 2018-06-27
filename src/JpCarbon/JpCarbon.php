@@ -167,7 +167,7 @@ class JpCarbon extends Carbon
                 if ($d === 10) {
                     return '体育の日';
                 }
-            } elseif (2000 <= $y ) {
+            } elseif (2000 <= $y) {
                 if (8 <= $d && $d <= 14 && $w === 1 && $y !== 2020) {
                     if (2020 <= $y) {
                         return 'スポーツの日';
