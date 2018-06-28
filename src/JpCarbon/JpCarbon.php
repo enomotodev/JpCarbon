@@ -58,6 +58,20 @@ class JpCarbon extends Carbon
             return '皇太子・徳仁親王の結婚の儀';
         }
 
+        // 東京オリンピック 特別措置法
+        if ($y === 2020) {
+            if ($m === 7) {
+                if ($d === 23) {
+                    return '海の日';
+                } elseif ($d === 24) {
+                    return 'スポーツの日';
+                }
+            } elseif ($m === 8) {
+                if ($d === 10) {
+                    return '山の日';
+                }
+            }
+        }
         // 国民の祝日
         if ($m === 1) {
             if ($d === 1) {
@@ -78,6 +92,9 @@ class JpCarbon extends Carbon
                 if ($d === 11) {
                     return '建国記念の日';
                 }
+            }
+            if (2020 <= $y && $d === 23) {
+                return '天皇誕生日';
             }
         } elseif ($m === 3) {
             if (19 <= $d && $d <= 22) {
@@ -113,13 +130,13 @@ class JpCarbon extends Carbon
                     return '海の日';
                 }
             } elseif (2003 <= $y) {
-                if (15 <= $d && $d <= 21 && $w === 1) {
+                if (15 <= $d && $d <= 21 && $w === 1 && 2020 !== $y) {
                     return '海の日';
                 }
             }
         } elseif ($m === 8) {
             if (2016 <= $y) {
-                if ($d === 11) {
+                if ($d === 11 && 2020 !== $y) {
                     return '山の日';
                 }
             }
@@ -151,7 +168,11 @@ class JpCarbon extends Carbon
                     return '体育の日';
                 }
             } elseif (2000 <= $y) {
-                if (8 <= $d && $d <= 14 && $w === 1) {
+                if (8 <= $d && $d <= 14 && $w === 1 && $y !== 2020) {
+                    if (2020 <= $y) {
+                        return 'スポーツの日';
+                    }
+
                     return '体育の日';
                 }
             }
