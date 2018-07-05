@@ -3,6 +3,8 @@
 [![Latest Stable Version](https://poser.pugx.org/enomotodev/jp-carbon/v/stable.png)](https://packagist.org/packages/enomotodev/jp-carbon)
 [![Build Status](https://api.travis-ci.org/enomotodev/JpCarbon.svg?branch=master)](https://travis-ci.org/enomotodev/JpCarbon)
 [![StyleCI](https://styleci.io/repos/104899144/shield?style=flat)](https://styleci.io/repos/104899144)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/enomotodev/JpCarbon/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/enomotodev/JpCarbon)
+[![Code Coverage](https://scrutinizer-ci.com/g/enomotodev/JpCarbon/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/enomotodev/JpCarbon)
 
 Japanese extended version of carbon of the PHP datetime API.
 
