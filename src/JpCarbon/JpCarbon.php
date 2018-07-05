@@ -206,6 +206,14 @@ class JpCarbon extends Carbon
         return self::$etoMapping[$this->year % 12];
     }
 
+    /**
+     * @param $future
+     * @param $present
+     * @param $past
+     * @param $y
+     *
+     * @return int
+     */
     protected function calcDay($future, $present, $past, $y)
     {
         $add = 0.242194 * ($y - 1980) - floor(($y - 1980) / 4);
@@ -226,11 +234,21 @@ class JpCarbon extends Carbon
         return (int) $val;
     }
 
+    /**
+     * @param $y
+     *
+     * @return int
+     */
     protected function shunBunDay($y)
     {
         return $this->calcDay(21.8519, 20.8431, 20.8357, $y);
     }
 
+    /**
+     * @param $y
+     *
+     * @return int
+     */
     protected function shuuBunDay($y)
     {
         return $this->calcDay(24.2488, 23.2488, 23.2588, $y);
