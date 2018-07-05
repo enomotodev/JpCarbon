@@ -211,7 +211,7 @@ class JpCarbon extends Carbon
      * @param $present
      * @param $past
      * @param $y
-     * 
+     *
      * @return int
      */
     protected function calcDay($future, $present, $past, $y)
