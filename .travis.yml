@@ -35,4 +35,4 @@ install:
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable --no-suggest --prefer-lowest; fi
 
 script:
-  - vendor/bin/phpunit
+  - composer phpunit
