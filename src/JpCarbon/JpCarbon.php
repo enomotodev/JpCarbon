@@ -13,7 +13,7 @@ class JpCarbon extends Carbon
     /**
      * @var array
      */
-    protected static $etoMapping = array('申', '酉', '戌', '亥', '子', '丑', '寅', '卯', '辰', '巳', '午', '未');
+    protected static $etoMapping = ['申', '酉', '戌', '亥', '子', '丑', '寅', '卯', '辰', '巳', '午', '未'];
 
     /**
      * @param string|null               $time
@@ -40,12 +40,12 @@ class JpCarbon extends Carbon
      */
     public function getHoliday()
     {
-        list($y, $m, $d, $w) = array(
+        list($y, $m, $d, $w) = [
             $this->year,
             $this->month,
             $this->day,
             $this->dayOfWeek,
-        );
+        ];
 
         // 皇室慶弔行事に伴う休日
         if ($y === 1959 && $m === 4 && $d === 10) {

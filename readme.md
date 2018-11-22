@@ -8,6 +8,8 @@
 
 Japanese extended version of carbon of the PHP datetime API.
 
+**For Carbon < 2.0, please use [1.0 branch](https://github.com/enomotodev/JpCarbon/tree/1.0)**
+
 ## Usage
 
 ```php

@@ -21,12 +21,14 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "nesbot/carbon": "~1.21"
+        "php": "^7.1.8",
+        "nesbot/carbon": "~2.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "~2",
-        "phpunit/phpunit": "~4.8 || ~5.0"
+        "phpunit/phpunit": "^7.1.5"
+    },
+    "suggest": {
+        "friendsofphp/php-cs-fixer": "Needed for the `composer phpcs` command. Allow to automatically fix code style."
     },
     "autoload": {
         "files": [
@@ -43,13 +45,16 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "2.0-dev"
         }
     },
     "scripts": {
-        "test": "./vendor/bin/phpunit; ./vendor/bin/php-cs-fixer fix -v --diff --dry-run;",
-        "phpunit": "./vendor/bin/phpunit;",
-        "phpcs": "./vendor/bin/php-cs-fixer fix -v --diff --dry-run;"
+        "test": [
+            "@phpunit",
+            "@phpcs"
+        ],
+        "phpunit": "phpunit --verbose --coverage-clover=coverage.xml",
+        "phpcs": "php-cs-fixer fix -v --diff --dry-run"
     },
     "prefer-stable": true
 }
