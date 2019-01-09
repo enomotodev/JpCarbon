@@ -56,6 +56,14 @@ class JpCarbon extends Carbon
             return '即位の礼正殿の儀';
         } elseif ($y === 1993 && $m === 6 && $d === 9) {
             return '皇太子・徳仁親王の結婚の儀';
+        } elseif ($y === 2019 && $m === 4 && $d === 30) {
+            return '国民の休日';
+        } elseif ($y === 2019 && $m === 5 && $d === 1) {
+            return '天皇の即位の日';
+        } elseif ($y === 2019 && $m === 5 && $d === 2) {
+            return '国民の休日';
+        } elseif ($y === 2019 && $m === 10 && $d === 22) {
+            return '即位礼正殿の儀の行われる日';
         }
 
         // 東京オリンピック 特別措置法
