@@ -53,7 +53,7 @@ class JpCarbon extends Carbon
         } elseif ($y === 1989 && $m === 2 && $d === 24) {
             return '昭和天皇の大喪の礼';
         } elseif ($y === 1990 && $m === 11 && $d === 12) {
-            return '即位の礼正殿の儀';
+            return '即位礼正殿の儀';
         } elseif ($y === 1993 && $m === 6 && $d === 9) {
             return '皇太子・徳仁親王の結婚の儀';
         } elseif ($y === 2019 && $m === 4 && $d === 30) {
