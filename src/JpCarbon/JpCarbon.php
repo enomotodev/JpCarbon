@@ -63,7 +63,7 @@ class JpCarbon extends Carbon
         } elseif ($y === 2019 && $m === 5 && $d === 2) {
             return '国民の休日';
         } elseif ($y === 2019 && $m === 10 && $d === 22) {
-            return '即位礼正殿の儀の行われる日';
+            return '即位礼正殿の儀';
         }
 
         // 東京オリンピック 特別措置法
