@@ -250,4 +250,30 @@ class HolidayTest extends TestCase
             [[2021,  8, 11], '山の日'],
         ];
     }
+
+    /**
+     * @param array  $date
+     * @param string $expected
+     *
+     * @dataProvider dataProvider皇室慶弔行事に伴う休日
+     */
+    public function test皇室慶弔行事に伴う休日($date, $expected)
+    {
+        list($y, $m, $d) = $date;
+        $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
+    }
+
+    public function dataProvider皇室慶弔行事に伴う休日()
+    {
+        return [
+            [[1959,  4, 10], '皇太子・明仁親王の結婚の儀'],
+            [[1989,  2, 24], '昭和天皇の大喪の礼'],
+            [[1990, 11, 12], '即位礼正殿の儀'],
+            [[1993,  6,  9], '皇太子・徳仁親王の結婚の儀'],
+            [[2019,  4, 30], '国民の休日'],
+            [[2019,  5,  1], '天皇の即位の日'],
+            [[2019,  5,  2], '国民の休日'],
+            [[2019, 10, 22], '即位礼正殿の儀'],
+        ];
+    }
 }
