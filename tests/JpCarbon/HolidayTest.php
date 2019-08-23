@@ -170,12 +170,73 @@ class HolidayTest extends TestCase
     public function dataProvider天皇誕生日()
     {
         return [
+            [[1988,  4, 29], '天皇誕生日'],
             [[2017, 12, 23], '天皇誕生日'],
             [[2018, 12, 23], '天皇誕生日'],
             [[2019, 12, 23], ''],
             [[2020, 12, 23], ''],
             [[2020,  2, 23], '天皇誕生日'],
             [[2021,  2, 23], '天皇誕生日'],
+        ];
+    }
+
+    /**
+     * @param array  $date
+     * @param string $expected
+     *
+     * @dataProvider dataProvider成人の日
+     */
+    public function test成人の日($date, $expected)
+    {
+        list($y, $m, $d) = $date;
+        $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
+    }
+
+    public function dataProvider成人の日()
+    {
+        return [
+            [[1999,  1, 15], '成人の日'],
+            [[2000,  1, 10], '成人の日'],
+        ];
+    }
+
+    /**
+     * @param array  $date
+     * @param string $expected
+     *
+     * @dataProvider dataProviderみどりの日
+     */
+    public function testみどりの日($date, $expected)
+    {
+        list($y, $m, $d) = $date;
+        $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
+    }
+
+    public function dataProviderみどりの日()
+    {
+        return [
+            [[2006,  4, 29], 'みどりの日'],
+            [[2007,  5,  4], 'みどりの日'],
+        ];
+    }
+
+    /**
+     * @param array  $date
+     * @param string $expected
+     *
+     * @dataProvider dataProvider敬老の日
+     */
+    public function test敬老の日($date, $expected)
+    {
+        list($y, $m, $d) = $date;
+        $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
+    }
+
+    public function dataProvider敬老の日()
+    {
+        return [
+            [[2002,  9, 15], '敬老の日'],
+            [[2003,  9, 15], '敬老の日'],
         ];
     }
 
@@ -194,6 +255,7 @@ class HolidayTest extends TestCase
     public function dataProvider海の日()
     {
         return [
+            [[2002,  7, 20], '海の日'],
             [[2017,  7, 17], '海の日'],
             [[2018,  7, 16], '海の日'],
             [[2019,  7, 15], '海の日'],
@@ -218,6 +280,7 @@ class HolidayTest extends TestCase
     public function dataProviderスポーツの日()
     {
         return [
+            [[1999, 10, 10], '体育の日'],
             [[2017, 10,  9], '体育の日'],
             [[2018, 10,  8], '体育の日'],
             [[2019, 10, 14], '体育の日'],
@@ -248,6 +311,53 @@ class HolidayTest extends TestCase
             [[2020,  8, 11], ''],
             [[2020,  8, 10], '山の日'],
             [[2021,  8, 11], '山の日'],
+        ];
+    }
+
+    /**
+     * @param array  $date
+     * @param string $expected
+     *
+     * @dataProvider dataProvider国民の休日
+     */
+    public function test国民の休日($date, $expected)
+    {
+        list($y, $m, $d) = $date;
+        $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
+    }
+
+    public function dataProvider国民の休日()
+    {
+        return [
+            [[1988,  5,  4], '国民の休日'],
+            [[1989,  5,  4], '国民の休日'],
+            [[1990,  5,  4], '国民の休日'],
+            [[1991,  5,  4], '国民の休日'],
+            [[1993,  5,  4], '国民の休日'],
+            [[1994,  5,  4], '国民の休日'],
+            [[1995,  5,  4], '国民の休日'],
+            [[1996,  5,  4], '国民の休日'],
+            [[1999,  5,  4], '国民の休日'],
+            [[2000,  5,  4], '国民の休日'],
+            [[2001,  5,  4], '国民の休日'],
+            [[2002,  5,  4], '国民の休日'],
+            [[2004,  5,  4], '国民の休日'],
+            [[2005,  5,  4], '国民の休日'],
+            [[2006,  5,  4], '国民の休日'],
+            [[2032,  9, 21], '国民の休日'],
+            [[2049,  9, 21], '国民の休日'],
+            [[2060,  9, 21], '国民の休日'],
+            [[2077,  9, 21], '国民の休日'],
+            [[2088,  9, 21], '国民の休日'],
+            [[2094,  9, 21], '国民の休日'],
+            [[2009,  9, 22], '国民の休日'],
+            [[2015,  9, 22], '国民の休日'],
+            [[2026,  9, 22], '国民の休日'],
+            [[2037,  9, 22], '国民の休日'],
+            [[2043,  9, 22], '国民の休日'],
+            [[2054,  9, 22], '国民の休日'],
+            [[2071,  9, 22], '国民の休日'],
+            [[2099,  9, 22], '国民の休日'],
         ];
     }
 
