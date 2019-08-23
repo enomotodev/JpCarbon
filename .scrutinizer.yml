@@ -1,17 +1,16 @@
 build:
-    nodes:
-        analysis:
-            environment:
-                php: 7.2
+  nodes:
+    analysis:
+      environment:
+        php: 7.2
 
-    tests:
-        override:
-            -
-                command: 'vendor/bin/phpunit --coverage-clover=coverage.colver'
-                coverage:
-                    file: 'coverage.colver'
-                    format: 'clover'
+  tests:
+    override:
+      - command: 'vendor/bin/phpunit --coverage-clover=coverage.colver'
+        coverage:
+          file: 'coverage.colver'
+          format: 'clover'
 
 filter:
-    paths:
-        - src/*
+  paths:
+    - src/*
