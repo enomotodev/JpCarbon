@@ -124,7 +124,7 @@ class JpCarbon extends Carbon
             if ($d === 3) {
                 return '憲法記念日';
             } elseif ($d === 4) {
-                if (1988 <= $y && $y <= 2006 && 1 <= $w && $w <= 5) {
+                if (1988 <= $y && $y <= 2006 && 1 <= $w && $w <= 6) {
                     return '国民の休日';
                 } elseif (2007 <= $y) {
                     return 'みどりの日';
@@ -158,7 +158,7 @@ class JpCarbon extends Carbon
                     return '敬老の日';
                 }
             }
-            if (2009 <= $y && $w === 1) {
+            if (2009 <= $y && $w !== 0) {
                 if (21 <= $d && $d <= 23) {
                     if ($d + 1 === $this->shuuBunDay($y)) {
                         return '国民の休日';
