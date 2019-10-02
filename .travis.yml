@@ -20,6 +20,12 @@ matrix:
       env:
         - xdebug=false
         - setup=lowest
+    - php: 7.4snapshot
+      env: xdebug=false
+    - php: 7.4snapshot
+      env:
+        - xdebug=false
+        - setup=lowest
 
 sudo: false
 
