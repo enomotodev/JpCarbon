@@ -1,3 +1,4 @@
+dist: bionic
 language: php
 
 env:
@@ -20,9 +21,9 @@ matrix:
       env:
         - xdebug=false
         - setup=lowest
-    - php: 7.4snapshot
+    - php: 7.4
       env: xdebug=false
-    - php: 7.4snapshot
+    - php: 7.4
       env:
         - xdebug=false
         - setup=lowest
