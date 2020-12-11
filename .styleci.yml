@@ -23,7 +23,6 @@ enabled:
   - phpdoc_types
   - phpdoc_var_without_name
   - return
-  - self_accessor
   - short_bool_cast
   - single_quote
   - spaces_after_semicolon
