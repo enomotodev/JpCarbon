@@ -1,10 +1,9 @@
 # JpCarbon
 
-[![Latest Stable Version](https://poser.pugx.org/enomotodev/jp-carbon/v/stable.png)](https://packagist.org/packages/enomotodev/jp-carbon)
-[![Build Status](https://api.travis-ci.org/enomotodev/JpCarbon.svg?branch=master)](https://travis-ci.org/enomotodev/JpCarbon)
-[![StyleCI](https://styleci.io/repos/104899144/shield?style=flat)](https://styleci.io/repos/104899144)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/enomotodev/JpCarbon/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/enomotodev/JpCarbon)
-[![Code Coverage](https://scrutinizer-ci.com/g/enomotodev/JpCarbon/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/enomotodev/JpCarbon)
+<a href="https://github.com/enomotodev/JpCarbon/actions"><img src="https://github.com/enomotodev/JpCarbon/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/enomotodev/jp-carbon"><img src="https://img.shields.io/packagist/dt/enomotodev/jp-carbon" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/enomotodev/jp-carbon"><img src="https://img.shields.io/packagist/v/enomotodev/jp-carbon" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/enomotodev/jp-carbon"><img src="https://img.shields.io/packagist/l/enomotodev/jp-carbon" alt="License"></a>
 
 Japanese extended version of carbon of the PHP datetime API.
 
