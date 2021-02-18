@@ -21,11 +21,11 @@
         }
     ],
     "require": {
-        "php": "^7.1.8",
-        "nesbot/carbon": "~2.0"
+        "php": "^7.1.8 || ^8.0",
+        "nesbot/carbon": "~2.45"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.1.5"
+        "phpunit/phpunit": "^7.5.20 || ^8.5.14"
     },
     "suggest": {
         "friendsofphp/php-cs-fixer": "Needed for the `composer phpcs` command. Allow to automatically fix code style."
