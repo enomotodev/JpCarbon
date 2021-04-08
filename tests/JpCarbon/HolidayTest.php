@@ -167,7 +167,6 @@ class HolidayTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
     }
 
-
     public function dataProvider2021()
     {
         return array(
