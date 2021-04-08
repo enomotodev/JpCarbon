@@ -79,6 +79,18 @@ class JpCarbon extends Carbon
                     return '山の日';
                 }
             }
+        } elseif ($y === 2021) {
+            if ($m === 7) {
+                if ($d === 22) {
+                    return '海の日';
+                } elseif ($d === 23) {
+                    return 'スポーツの日';
+                }
+            } elseif ($m === 8) {
+                if ($d === 8) {
+                    return '山の日';
+                }
+            }
         }
         // 国民の祝日
         if ($m === 1) {

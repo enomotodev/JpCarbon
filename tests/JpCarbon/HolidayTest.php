@@ -159,6 +159,28 @@ class HolidayTest extends PHPUnit_Framework_TestCase
      * @param array  $date
      * @param string $expected
      *
+     * @dataProvider dataProvider2021
+     */
+    public function testHoliday2021($date, $expected)
+    {
+        list($y, $m, $d) = $date;
+        $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
+    }
+
+
+    public function dataProvider2021()
+    {
+        return array(
+            array(array(2021,  7, 22), '海の日'),
+            array(array(2021,  7, 23), 'スポーツの日'),
+            array(array(2021,  8, 8), '山の日'),
+        );
+    }
+
+    /**
+     * @param array  $date
+     * @param string $expected
+     *
      * @dataProvider dataProvider天皇誕生日
      */
     public function test天皇誕生日($date, $expected)
