@@ -150,13 +150,13 @@ class JpCarbon extends Carbon
                     return '海の日';
                 }
             } elseif (2003 <= $y) {
-                if (15 <= $d && $d <= 21 && $w === 1 && 2020 !== $y) {
+                if (15 <= $d && $d <= 21 && $w === 1 && 2020 !== $y && 2021 != $y) {
                     return '海の日';
                 }
             }
         } elseif ($m === 8) {
             if (2016 <= $y) {
-                if ($d === 11 && 2020 !== $y) {
+                if ($d === 11 && 2020 !== $y && 2021 !== $y) {
                     return '山の日';
                 }
             }
@@ -188,7 +188,7 @@ class JpCarbon extends Carbon
                     return '体育の日';
                 }
             } elseif (2000 <= $y) {
-                if (8 <= $d && $d <= 14 && $w === 1 && $y !== 2020) {
+                if (8 <= $d && $d <= 14 && $w === 1 && $y !== 2020 && $y !== 2021) {
                     if (2020 <= $y) {
                         return 'スポーツの日';
                     }
