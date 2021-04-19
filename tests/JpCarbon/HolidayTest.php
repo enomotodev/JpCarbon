@@ -205,22 +205,22 @@ class HolidayTest extends PHPUnit_Framework_TestCase
     public function dataProvider2022()
     {
         return array(
-            array(array(2021,  1, 1), '元日'),
-            array(array(2021,  1, 10), '成人の日'),
-            array(array(2021,  2, 11), '建国記念の日'),
-            array(array(2021,  2, 23), '天皇誕生日'),
-            array(array(2021,  3, 21), '春分の日'),
-            array(array(2021,  4, 29), '昭和の日'),
-            array(array(2021,  5, 3), '憲法記念日'),
-            array(array(2021,  5, 4), 'みどりの日'),
-            array(array(2021,  5, 5), 'こどもの日'),
-            array(array(2021,  7, 18), '海の日'),
-            array(array(2021,  8, 11), '山の日'),
-            array(array(2021,  9, 19), '敬老の日'),
-            array(array(2021,  9, 23), '秋分の日'),
-            array(array(2021,  10, 10), 'スポーツの日'),
-            array(array(2021,  11, 3), '文化の日'),
-            array(array(2021,  11, 23), '勤労感謝の日'),
+            array(array(2022,  1, 1), '元日'),
+            array(array(2022,  1, 10), '成人の日'),
+            array(array(2022,  2, 11), '建国記念の日'),
+            array(array(2022,  2, 23), '天皇誕生日'),
+            array(array(2022,  3, 21), '春分の日'),
+            array(array(2022,  4, 29), '昭和の日'),
+            array(array(2022,  5, 3), '憲法記念日'),
+            array(array(2022,  5, 4), 'みどりの日'),
+            array(array(2022,  5, 5), 'こどもの日'),
+            array(array(2022,  7, 18), '海の日'),
+            array(array(2022,  8, 11), '山の日'),
+            array(array(2022,  9, 19), '敬老の日'),
+            array(array(2022,  9, 23), '秋分の日'),
+            array(array(2022,  10, 10), 'スポーツの日'),
+            array(array(2022,  11, 3), '文化の日'),
+            array(array(2022,  11, 23), '勤労感謝の日'),
         );
     }
 
