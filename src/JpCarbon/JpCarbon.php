@@ -150,7 +150,7 @@ class JpCarbon extends Carbon
                     return '海の日';
                 }
             } elseif (2003 <= $y) {
-                if (15 <= $d && $d <= 21 && $w === 1 && 2020 !== $y && 2021 != $y) {
+                if (15 <= $d && $d <= 21 && $w === 1 && 2020 !== $y && 2021 !== $y) {
                     return '海の日';
                 }
             }
