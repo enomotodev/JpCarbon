@@ -170,9 +170,57 @@ class HolidayTest extends PHPUnit_Framework_TestCase
     public function dataProvider2021()
     {
         return array(
+            array(array(2021,  1, 1), '元日'),
+            array(array(2021,  1, 11), '成人の日'),
+            array(array(2021,  2, 11), '建国記念の日'),
+            array(array(2021,  2, 23), '天皇誕生日'),
+            array(array(2021,  3, 20), '春分の日'),
+            array(array(2021,  4, 29), '昭和の日'),
+            array(array(2021,  5, 3), '憲法記念日'),
+            array(array(2021,  5, 4), 'みどりの日'),
+            array(array(2021,  5, 5), 'こどもの日'),
             array(array(2021,  7, 22), '海の日'),
             array(array(2021,  7, 23), 'スポーツの日'),
             array(array(2021,  8, 8), '山の日'),
+            array(array(2021,  8, 9), '振替休日'),
+            array(array(2021,  9, 20), '敬老の日'),
+            array(array(2021,  9, 23), '秋分の日'),
+            array(array(2021,  11, 3), '文化の日'),
+            array(array(2021,  11, 23), '勤労感謝の日'),
+        );
+    }
+
+    /**
+     * @param array  $date
+     * @param string $expected
+     *
+     * @dataProvider dataProvider2022
+     */
+    public function testHoliday2022($date, $expected)
+    {
+        list($y, $m, $d) = $date;
+        $this->assertEquals($expected, JpCarbon::createFromDate($y, $m, $d)->holiday);
+    }
+
+    public function dataProvider2022()
+    {
+        return array(
+            array(array(2021,  1, 1), '元日'),
+            array(array(2021,  1, 10), '成人の日'),
+            array(array(2021,  2, 11), '建国記念の日'),
+            array(array(2021,  2, 23), '天皇誕生日'),
+            array(array(2021,  3, 21), '春分の日'),
+            array(array(2021,  4, 29), '昭和の日'),
+            array(array(2021,  5, 3), '憲法記念日'),
+            array(array(2021,  5, 4), 'みどりの日'),
+            array(array(2021,  5, 5), 'こどもの日'),
+            array(array(2021,  7, 18), '海の日'),
+            array(array(2021,  8, 11), '山の日'),
+            array(array(2021,  9, 19), '敬老の日'),
+            array(array(2021,  9, 23), '秋分の日'),
+            array(array(2021,  10, 10), 'スポーツの日'),
+            array(array(2021,  11, 3), '文化の日'),
+            array(array(2021,  11, 23), '勤労感謝の日'),
         );
     }
 
@@ -220,7 +268,9 @@ class HolidayTest extends PHPUnit_Framework_TestCase
             array(array(2019,  7, 15), '海の日'),
             array(array(2020,  7, 20), ''),
             array(array(2020,  7, 23), '海の日'),
-            array(array(2021,  7, 19), '海の日'),
+            array(array(2021,  7, 19), ''),
+            array(array(2021,  7, 22), '海の日'),
+            array(array(2022,  7, 18), '海の日'),
         );
     }
 
@@ -244,7 +294,9 @@ class HolidayTest extends PHPUnit_Framework_TestCase
             array(array(2019, 10, 14), '体育の日'),
             array(array(2020, 10, 12), ''),
             array(array(2020,  7, 24), 'スポーツの日'),
-            array(array(2021, 10, 11), 'スポーツの日'),
+            array(array(2021, 10, 11), ''),
+            array(array(2021, 7, 23), 'スポーツの日'),
+            array(array(2022, 10, 10), 'スポーツの日'),
         );
     }
 
@@ -268,7 +320,9 @@ class HolidayTest extends PHPUnit_Framework_TestCase
             array(array(2019,  8, 11), '山の日'),
             array(array(2020,  8, 11), ''),
             array(array(2020,  8, 10), '山の日'),
-            array(array(2021,  8, 11), '山の日'),
+            array(array(2021,  8, 11), ''),
+            array(array(2021,  8, 8), '山の日'),
+            array(array(2022,  8, 11), '山の日'),
         );
     }
 }
